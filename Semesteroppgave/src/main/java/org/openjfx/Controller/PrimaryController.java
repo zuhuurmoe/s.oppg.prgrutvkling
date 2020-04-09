@@ -2,6 +2,7 @@ package org.openjfx.Controller;
 
 import java.io.IOException;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -13,31 +14,19 @@ import javafx.fxml.FXML;
 
 
 public class PrimaryController {
-
-    @FXML
-    private TextField fornavn;
-
-    @FXML
-    private TextField brukernavn;
-
-    @FXML
-    private TextField epost;
-
-    @FXML
-    private TextField etternavn;
-
-    @FXML
-    private PasswordField passord;
-
     @FXML
     private ImageView imageView;
 
     @FXML
-    private Button registerer;
+    void switchAdmin(ActionEvent event) throws IOException {
+        MainApp.setRoot("login");
+
+    }
 
     @FXML
-    private void switchToSecondary() throws IOException {
-        MainApp.setRoot("secondary");
+    void switchOpprettBruker(ActionEvent event) throws IOException{
+        MainApp.setRoot("opprettbruker");
+
     }
 
 }
